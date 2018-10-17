@@ -1,9 +1,13 @@
 
-import { observable, action } from 'mobx';
+import { decorate, observable } from 'mobx';
 
 class Tasks {
-  @observable testTask = 'testTask';
+  testTask = 'testTask';
 }
+
+decorate(Tasks, {
+  testTask: observable,
+})
 
 const tasks = new Tasks();
 

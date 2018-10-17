@@ -1,9 +1,13 @@
 
-import { observable, action } from 'mobx';
+import { decorate, observable } from 'mobx';
 
 class Users {
-  @observable testUser = 'testUser';
+  testUser = 'testUser';
 }
+
+decorate(Users, {
+  testUser: observable,
+})
 
 const users = new Users();
 
