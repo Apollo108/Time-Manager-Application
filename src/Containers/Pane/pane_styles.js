@@ -20,8 +20,12 @@ export default {
     color: 'gray',
   },
   addIcon: {
-    margin: '1px 0 0 10px',
+    margin: '2px 0 0 10px',
     color: 'gray',
     fontSize: 18,
-  },
+    cursor: 'pointer',
+    '&:hover': {
+      color: 'green',
+    }
+  }
 }
